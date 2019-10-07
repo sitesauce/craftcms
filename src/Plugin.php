@@ -26,7 +26,7 @@ class Plugin extends \craft\base\Plugin
     /**
      * @inheritdoc
      */
-    public $hasCpSection = true;
+    public $hasCpSettings = true;
 
     /**
      * @inheritdoc
@@ -47,7 +47,7 @@ class Plugin extends \craft\base\Plugin
             return;
         }
 
-        Event::on(Elements::class, Elements::EVENT_AFTER_SAVE_ELEMENT, function(Event $e) {
+        Event::on(Elements::class, Elements::EVENT_AFTER_SAVE_ELEMENT, function (Event $e) {
             if (is_string($url = $this->getSettings()->build_hook)) {
                 Craft::createGuzzleClient()->request('POST', $url, [
                     RequestOptions::HEADERS => ['Content-Type' => 'application/json'],

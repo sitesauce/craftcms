@@ -1,8 +1,13 @@
 {% import "_includes/forms" as forms %}
 
-{{ forms.urlField({
+{{ forms.textField({
     first: true,
     label: "Build Hook",
     name: 'build_hook',
-    value: settings.build_hook
+    value: settings.build_hook,
+    placeholder: 'https://app.sitesauce.app/api/build_hooks/...',
+    type: 'url',
+    required: true,
+    errors: settings.getErrors('build_hook'),
+    instructions: 'A build hook for the site you want to keep updated. You can get this value on the settings page of the Sitesauce dashboard.',
 }) }}
