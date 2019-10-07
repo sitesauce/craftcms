@@ -1,0 +1,8 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.urlField({
+    first: true,
+    label: "Build Hook",
+    name: 'build_hook',
+    value: settings.build_hook
+}) }}

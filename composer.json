@@ -1,0 +1,41 @@
+{
+  "name": "sitesauce/craftcms",
+  "description": "Connect your CraftCMS site with Sitesauce to keep your static site updated.",
+  "version": "1.0",
+  "type": "craft-plugin",
+  "keywords": [
+    "html",
+    "cms",
+    "craftcms",
+    "sitesauce",
+    "yii2"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Miguel Piedrafita",
+      "email": "soy@miguelpiedrafita.com",
+      "homepage": "https://miguelpiedrafita.com/"
+    }
+  ],
+  "support": {
+    "email": "soy@miguelpiedrafita.com",
+    "issues": "https://github.com/sitesauce/craftcms/issues?state=open",
+    "source": "https://github.com/sitesauce/craftcms/",
+    "docs": "https://github.com/sitesauce/craftcms//blob/master/README.md",
+    "rss": "https://github.com/sitesauce/craftcms//commits/master.atom"
+  },
+  "require": {
+    "craftcms/cms": "^3.1.19"
+  },
+  "autoload": {
+    "psr-4": {
+      "craft\\sitesauce\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Sitesauce",
+    "handle": "sitesauce",
+    "documentationUrl": "https://github.com/sitesauce/craftcms/blob/master/README.md"
+  }
+}
